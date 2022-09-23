@@ -1,14 +1,21 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
-import { PokemonApp } from './PokemonApp'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import store from './store';
+import { Provider } from 'react-redux';
+import { HashRouter } from 'react-router-dom';
+
+import { PokemonApp } from './PokemonApp';
+
 import './css/general.css'
 import './css/styles.css'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <PokemonApp />
-    </BrowserRouter>
+    <Provider store={store}>
+      <HashRouter>
+        <PokemonApp />
+      </HashRouter>
+    </Provider>
   </React.StrictMode>
-)
+);

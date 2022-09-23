@@ -1,5 +1,16 @@
 export const Footer = () => {
       return (
-            <div>Footer</div>
+            <footer className="footer">
+                  <div>
+                        <p>Saulo Román Santillán Nava</p>
+                        <p>Derechos Reservados &copy;</p>
+                  </div>
+                  <div>
+                        <p>Icono</p>
+                        <p>Icono</p>
+                        <p>Icono</p>
+                  </div>
+                  <small>Este proyecto es gracias a Academlo</small>
+            </footer>
       )
 }

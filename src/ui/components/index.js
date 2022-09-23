@@ -1,3 +1,5 @@
+export * from './Bar';
+export * from './ChooseForm';
 export * from './Footer';
-export * from './Header';
 export * from './Pagination';
+export * from './Spinner';

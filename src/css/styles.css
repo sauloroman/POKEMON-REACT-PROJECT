@@ -6,16 +6,143 @@
       height: 100vh;
       display: flex;
       flex-direction: column;
-      gap: 5rem;
 }
 
 .login__image {
       display: block;
-      margin: 0 auto;
+      margin: 15rem auto 5rem;
       width: 90%;
-      margin-top: 20rem;
+}
+
+.login__text {
+      text-align: center;
+      color: var(--color-font-1);
+      margin-bottom: 5rem;
+}
+
+.login__title {
+      margin-bottom: 2rem;
+      color: var(--color-red-3);
 }
 
 .bar--login {
       margin-top: auto;
+}
+
+/* ##################### */
+/* POKEDEX PAGE */
+/* ##################### */
+.pokedex__header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 8rem;
+}
+
+.pokedex__welcome {
+      text-align: center;
+      color: var(--color-red-3);
+      font-weight: 700;
+      line-height: 1.7;
+      margin-bottom: 3rem;
+}
+
+.pokedex__welcome span {
+      color: var(--color-font-2);
+}
+
+/* ##################### */
+/* POKEDEX LIST */
+/* ##################### */
+
+.pokemon-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+}
+
+/* ##################### */
+/* POKEDEX CARD */
+/* ##################### */
+
+.pokemon__card  {
+      margin: 0 auto;
+      width: 70%;
+      padding: .7rem;
+      border-radius: 9px;
+      margin-bottom: 2rem;
+      cursor: pointer;
+}
+
+.pokemon__card:hover {
+      transform: translateY(-5px);
+}
+
+.pokemon__card-imageBox {
+      display: flex;
+      justify-content: center;
+}
+
+.pokemon__card-image {
+      width: 50%;
+}
+
+.pokemon__card-info {
+      font-size: 1.4rem;
+      padding: 1rem;
+      padding-top: 2rem;
+      text-align: center;
+      background-color: var(--color-white);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+}
+
+.pokemon__card-info h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+}
+
+.pokemon__card-types {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2rem;
+}
+
+.pokemon__card-type {
+      display: flex;
+      color: var(--color-font-3);
+      font-weight: 600;
+}
+
+.pokemon__card-type p {
+      margin-right: .5rem;
+      margin-bottom: .5rem;
+}
+
+.pokemon__card-type p:last-child {
+      margin: 0;
+}
+
+.pokemon__card-info-type {
+      font-size: 1.2rem;
+      color: var(--color-font-4);
+}
+
+.pokemon__card-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 3rem;
+}
+
+.pokemon__card-stat {
+      margin-bottom: 1.5rem;
+}
+
+.pokemon__card-stat h4 {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--color-font-4);
 }
