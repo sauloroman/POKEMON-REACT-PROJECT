@@ -1,0 +1,362 @@
+:root {
+      --color-red-1: #DD1A1A;
+      --color-red-2: #D93F3F;
+      --color-red-3: #FE1936;
+      --color-red-4: #ED8F8F;
+
+      --color-font-1: #302F2F;
+      --color-font-2: #0F0F2D;
+      --color-font-3: #4F4F4F;
+      --color-font-4: #9F9F9F;
+      --color-font-5: #212121;
+
+      --color-black-1: #000000;
+      --color-black-2: #0C0C0C;
+
+      --color-white: #FFFFFF;
+}
+
+*,
+*::before,
+*::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: inherit;
+}
+
+html {
+      font-size: 62.5%;
+}
+
+body {
+      box-sizing: border-box;
+      color: #555;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.6rem;
+}
+
+button {
+      cursor: pointer;
+}
+
+ul {
+      list-style: none;
+}
+
+.container {
+      margin: 0 auto;
+      width: 120rem;
+      max-width: 95%;
+}
+
+/* ################################## */
+/* REUSABLE CLASSES */
+/* ################################## */
+
+.animation {
+      transition: all .4s ease-out;
+}
+
+.btn {
+      border: none;
+      height: 100%;
+      padding: 1rem 2rem;
+      background-color: var(--color-red-2);
+      color: var(--color-white);
+      font-family: inherit;
+      font-size: 1.6rem;
+}
+
+.btn:hover {
+      background-color: var(--color-red-1);
+}
+
+.bar {
+      position: relative;
+      height: 20rem;
+      background-color: var(--color-red-1);
+}
+
+.bar::after {
+      display: inline-block;
+      content: '';
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 5rem;
+      height: 5rem;
+      z-index: 3;
+      background-color: var(--color-font-5);
+      border-radius: 50%;
+      border: 1rem solid var(--color-black-1);
+}
+
+.bar__ball {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10rem;
+      height: 10rem;
+      z-index: 2;
+      background-color: var(--color-white);
+      border-radius: 50%;
+      border: 1rem solid var(--color-black-1);
+}
+
+.bar__black {
+      position: absolute;
+      height: 40%;
+      width: 100%;
+      background-color: var(--color-black-2);
+      bottom: 0;
+}
+
+/* ################################## */
+/* POKEMON COLORS */
+/* ################################## */
+
+.normal {
+      background-image: linear-gradient(181.51deg, #735259 -6.44%, #BC6B7C 121.95%, #7C3F4C 186.11%);
+    }
+    
+    .background-normal {
+      background-color: #735259;
+    }
+    
+    .text-normal {
+      color: #735259;
+    }
+    
+    .grass {
+      background-image: linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%);
+    }
+    
+    .background-grass {
+      background-color: #B1DBBC;
+    }
+    
+    .text-grass {
+      color: #416460;
+    }
+    
+    .fire {
+      background-image: linear-gradient(176.37deg, #F96D6F -32.26%, #E35825 22.55%, #E8AE1B 125.72%);
+    }
+    
+    .background-fire {
+      background-color: #E6901E;
+    }
+    
+    .text-fire {
+      color: #E75C35;
+    }
+    
+    .water {
+      background-image: linear-gradient(179.57deg, #133258 -70.14%, #1479FB 56.16%, #82B2F1 214.85%);;
+    }
+    
+    .background-water {
+      background-color: #83B9FF;
+    }
+    
+    .text-water{
+      color: #1479FB;
+    }
+    
+    .bug {
+      background-image: linear-gradient(177.56deg, #62DB60 -58.92%, #3BB039 16.57%, #AAFFA8 209.53%);;
+    }
+    
+    .background-bug {
+      background-color: #4AB648;
+    }
+    
+    .text-bug {
+      color: #4AB648;
+    }
+    
+    .poison {
+      background-image: linear-gradient(177.03deg, #5B3184 -11.97%, #A564E3 71.28%, #CE9BFF 135.64%);
+    }
+    
+    .background-poison {
+      background-color: #5B3184;
+    }
+    
+    .text-poison {
+      color: #5B3184;
+    }
+    
+    .electric {
+      background-image: linear-gradient(179.75deg, #0C1395 -19.96%, #2B319B 43.67%, #7075D9 138.4%);
+    }
+    
+    .background-electric {
+      background-color: #0C1395;
+    }
+    
+    .text-electric {
+      color: #0C1395;
+    }
+    
+    .ground {
+      background-image: linear-gradient(179.75deg, #654008 -19.96%, #895C1A 43.67%, #D69638 138.4%);
+    }
+    
+    .background-ground {
+      background-color: #654008;
+    }
+    
+    .text-ground {
+      color: #654008;
+    }
+    
+    .fairy {
+      background-image: linear-gradient(179.75deg, #fcc2d7 -19.96%, #fdcedf 43.67%, #feedf3 138.4%);
+    }
+    
+    .background-fairy {
+      background-color: #ca9bac;
+    }
+    
+    .text-fairy {
+      color: #ca9bac;
+    }
+    
+    .fighting {
+      background-image: linear-gradient(176.83deg, #96402A -8.78%, #F1613C 169.09%, #CB735D 242.33%);
+    }
+    
+    .background-fighting {
+      background-color: #96402A;
+    }
+    
+    .text-fighting {
+      color: #96402A;
+    }
+    
+    .psychic {
+      background-image: linear-gradient(179.75deg, #E62D2D -19.96%, #D13E3E 43.67%, #F07F7F 138.4%);
+    }
+    
+    .background-psychic {
+      background-color: #E62D2D;
+    }
+    
+    .text-psychic {
+      color: #E62D2D;
+    }
+    
+    .rock {
+      background-image: linear-gradient(177.03deg, #7E7E7E -11.97%, #8D8D94 57.49%, #D3D3D3 135.64%);
+    }
+    
+    .background-rock {
+      background-color: #7E7E7E;
+    }
+    
+    .text-color {
+      color: #7E7E7E;
+    }
+    
+    .ghost {
+      background-image: linear-gradient(177.03deg, #323569 -11.97%, #454AA8 57.49%, #787DDA 135.64%);
+    }
+    
+    .background-ghost {
+      background-color: #323569;
+    }
+    
+    .text-ghost {
+      color: #323569;
+    }
+    
+    .dark {
+      background-image: linear-gradient(177.03deg, #030706 -11.97%, #0D1211 57.49%, #5A5E5D 135.64%);
+    }
+    
+    .background-dark {
+      background-color: #030706;
+    }
+    
+    .text-dark {
+      color: #030706;
+    }
+    
+    .steel {
+      background-image: linear-gradient(179.75deg, #5E736C -19.96%, #728881 43.67%, #A8A8A8 138.4%);
+    }
+    
+    .background-steel {
+      background-color: #5E736C;
+    }
+    
+    .text-steel {
+      color: #5E736C;
+    }
+    
+    .ice {
+      background-image: linear-gradient(177.03deg, #6FBEDF -11.97%, #64CBF5 47.77%, #BDEBFE 136.72%);
+    }
+    
+    .background-ice {
+      background-color: #6FBEDF;
+    }
+    
+    .text-ice {
+      color: #6FBEDF;
+    }
+    
+    .dragon {
+      background-image: linear-gradient(179.75deg, #478A93 -19.96%, #56A4AE 43.67%, #A2BEC1 138.4%);
+    }
+    
+    .background-dragon {
+      background-color: #478A93;
+    }
+    
+    .text-dragon {
+      color: #478A93;
+    }
+    
+    .flying {
+      background-image: linear-gradient(179.75deg, #c5c094 -19.96%, #f6f0b9 43.67%, #faf6d5 138.4%);
+    }
+    
+    .background-flying {
+      background-color: #c5c094;
+    }
+    
+    .text-flying {
+      color: #c5c094;
+    }
+
+/* ################################## */
+/* ANIMATIONS */
+/* ################################## */
+
+@keyframes Rotate {
+      25% {
+        transform: rotate(90deg);
+      }
+      50% {
+        transform: rotate(180deg);
+      }
+      75% {
+        transform: rotate(270deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+}
+    
+@keyframes Stop {
+      0% {
+        transform: rotate(360deg);
+      }
+      100% {
+        transform: rotate( 0 );
+      }
+}

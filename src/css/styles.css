@@ -1,0 +1,21 @@
+/* ##################### */
+/* LOGIN */
+/* ##################### */
+
+.login {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+}
+
+.login__image {
+      display: block;
+      margin: 0 auto;
+      width: 90%;
+      margin-top: 20rem;
+}
+
+.bar--login {
+      margin-top: auto;
+}
