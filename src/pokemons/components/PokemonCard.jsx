@@ -1,21 +1,22 @@
+import { useNavigate } from "react-router-dom";
 import { useFetch } from "../../hooks"
+import { Types } from "../../ui";
 import { getPokemonInfo } from "../helpers";
-
-const Types = ({ types }) => {
-      return (
-            types?.map( type => (
-                  <p key={ type }>{ type[0].toUpperCase() + type.slice(1, type.length).toLowerCase() }</p>
-            ))
-      )
-}
 
 export const PokemonCard = ({ url }) => {
 
+      const navigate = useNavigate()
       const { data } = useFetch( url );
       const pokemon = getPokemonInfo( data );
 
-      return (
-            <div className={`pokemon__card background-${pokemon.type?.[0]} animation`} >
+      const onGoPokemonPage = () => {
+            navigate(`/pokemon/${pokemon.name.toLowerCase()}`)
+      }
+
+      return (    
+            <div 
+                  onClick={ onGoPokemonPage }
+                  className={`pokemon__card background-${pokemon.type?.[0]} animation`} >
                   <div className={`${ pokemon.type?.[0] } pokemon__card-imageBox`}>
                         <img
                               className="pokemon__card-image" 

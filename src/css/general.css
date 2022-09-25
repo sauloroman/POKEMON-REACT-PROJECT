@@ -76,6 +76,94 @@ h3 {
 /* REUSABLE CLASSES */
 /* ################################## */
 
+.modal {
+  position: fixed;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__header {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__icon {
+  font-size: 4rem;
+  cursor: pointer;
+  color: var(--color-black-1);
+  margin-bottom: 3rem;
+
+}
+
+.modal__pop {
+  background-color: var(--color-white);
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.modal__title {
+  color: var(--color-black-1);
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.modal__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.modal__buttons button {
+  width: 100%;
+  margin-right: 1rem;
+}
+
+.modal__buttons button:last-child {
+  margin: 0;
+}
+
+.modal__image {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+
+.modal__image small {
+  font-size: 1rem;
+}
+
+.modal__image img {
+  max-width: 100%;
+}
+
+.bar-power {
+  height: 3rem;
+  background: linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%);
+  border-radius: 4px;
+}
+
+.skill {
+  background-color: #d3d3d3;
+  display: inline-block;
+  margin: 0 2rem 2rem 0;
+  color: var(--color-font-1);
+  font-weight: bold;
+  padding: 1rem 2rem;
+}
+
 .footer {
   text-align: center;
   background-color: var(--color-black-2);
@@ -83,6 +171,35 @@ h3 {
   padding: 8rem;
   display: flex;
   flex-direction: column;
+}
+
+.footer__author {
+  margin-bottom: 4rem;
+  line-height: 1.7;
+}
+
+.footer__icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.footer__icons p {
+  margin-right: 2rem;
+}
+
+.footer__icons p:last-child {
+  margin: 0;
+}
+
+.footer__icon {
+  color: inherit;
+  font-size: 4rem;
+  margin-right: 2rem;
+}
+
+.footer__icons:last-child {
+  margin: 0;
 }
 
 .alert {
@@ -94,10 +211,6 @@ h3 {
       left: 50%;
       background-color: var(--color-alert-1);
       margin: 2rem auto;
-}
-
-.animation {
-      transition: all .4s ease-out;
 }
 
 .btn {
@@ -144,6 +257,33 @@ h3 {
 .active-btn.btn-switch::after {
       left: 50%;
       background-color: var(--color-white);
+}
+
+
+.btnBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.btn--return {
+      width: 95%;
+}
+
+.btn--reset {
+      width: 95%;
+}
+
+.btn--white {
+  background-color: var(--color-white);
+  color: var(--color-font-3);
+  box-shadow: inset 0 0 0 1px currentColor;
+}
+
+.btn--white:hover {
+  background-color: var(--color-font-4);
+  color: var(--color-white);
 }
 
 .bar {
@@ -233,18 +373,23 @@ h3 {
 /* ################################## */
 /* POKEMON COLORS */
 /* ################################## */
+.type-pokemon {
+  height: 100%;
+  padding: .5rem;
+  color: var(--color-white);
+}
 
 .normal {
-      background-image: linear-gradient(181.51deg, #735259 -6.44%, #BC6B7C 121.95%, #7C3F4C 186.11%);
+  background-image: linear-gradient(181.51deg, #735259 -6.44%, #BC6B7C 121.95%, #7C3F4C 186.11%);
 }
     
 .background-normal {
-      background-color: #735259;
+  background-color: #735259;
 }
     
-    .text-normal {
-      color: #735259;
-    }
+.text-normal {
+  color: #735259;
+}
     
     .grass {
       background-image: linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%);
@@ -476,4 +621,77 @@ h3 {
       100% {
         transform: rotate( 0 );
       }
+}
+
+/* ################################## */
+/* ERROR PAGE */
+/* ################################## */
+
+.error__page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10rem;
+}
+
+.error__page h2 {
+  font-weight: 600;
+  color: var(--color-red-1);
+  font-size: 4.8rem;
+  margin-bottom: 6rem;
+}
+
+.error__imageBox {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 6rem;
+}
+
+.error__imageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.error__imageContainer p {
+  font-size: 15rem;
+  font-weight: 700;
+  color: var(--color-font-1)
+}
+
+.error__imageContainer img {
+  width: 20%;
+}
+
+.error__text {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 6rem;
+}
+
+.error__imageShadow {
+  display: flex;
+  justify-content: center;
+}
+
+.error__imageShadow img {
+  width: 80%;
+}
+
+/* ################################## */
+/* HELPERS */
+/* ################################## */
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.animation {
+  transition: all .4s ease-out;
+}
+
+.shadow {
+  box-shadow: 0 1rem 2rem rgba( 0, 0, 0, 0.1 );
 }

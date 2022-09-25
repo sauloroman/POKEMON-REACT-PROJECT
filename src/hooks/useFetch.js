@@ -25,30 +25,28 @@ export const useFetch = (url) => {
                   const res = await fetch( url );
                   const data = await res.json();
 
-                  setState( 
-                        {
-                              data,
-                              isLoading: false,
-                              hasError: false
-                        }
-                  )
+                  return  {
+                        data,
+                        isLoading: false,
+                        hasError: false
+                  }
+                  
 
             } catch ( err ) {
 
-                  setState(
-                        {
-                              data: null,
-                              isLoading: false,
-                              hasError: err
-                        }
-                  )
-
+                  return {
+                        data: null,
+                        isLoading: false,
+                        hasError: err
+                  }
             }
 
       }
 
       useEffect( () => {
-            getFetch();
+            getFetch()
+                  .then( dataObj => setState( dataObj ))
+                  .catch( errObj => setState( errObj ))
       }, [url] )
 
       return {

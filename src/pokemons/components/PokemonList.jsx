@@ -26,11 +26,11 @@ export const PokemonList = () => {
                   {
                         !isLoading ? 
                         (
-                              <ul className="pokemon-grid">
+                              <ul className="pokemon-grid animation animate__animated animate__fadeDown">
                                     {pokemons?.map( pokemon => (
                                           <PokemonCard 
-                                                key={pokemon.name}
-                                                url={ pokemon.url }
+                                                key = { pokemon.name }
+                                                url = { pokemon.url }
                                           />
                                     ))}
                               </ul>
