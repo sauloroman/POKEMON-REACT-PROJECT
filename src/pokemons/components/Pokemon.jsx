@@ -7,12 +7,12 @@ export const Pokemon = ( {data} ) => {
 
       return (
             <>
-                  <div className="pokemon__container animate__animated animate__fadeInLeft">
-                        <div className="pokemon__info shadow">
+                  <div className="pokemon__container">
+                        <div className="pokemon__info animate__animated animate__fadeInLeft shadow">
                         
                               <figure className={`${ pokemon.type?.[0] }`}>
                                     <img 
-                                          className="pokemon__image"
+                                          className="pokemon__image animate__animated animate__zoomIn"
                                           src={pokemon.image} 
                                           alt='Pokemon image' />
                               </figure>
@@ -56,7 +56,7 @@ export const Pokemon = ( {data} ) => {
                               </div>
                         </div>
 
-                        <div className="pokemon__gallery shadow">
+                        <div className="pokemon__gallery animate__animated animate__fadeInRight shadow">
 
                               <figure className={`background-${pokemon.type?.[0]} pokemon__galleryImgBox`}>
                                     <img 
@@ -80,6 +80,13 @@ export const Pokemon = ( {data} ) => {
                                           />
                                     </figure>
                               </div>
+
+                              <figure className={`background-${pokemon.type?.[0]} pokemon__galleryImgBox`}>
+                                    <img 
+                                          src={ pokemon.image5 } 
+                                          alt='Pokemon image'
+                                    />
+                              </figure>
                         </div>
                   </div>
 

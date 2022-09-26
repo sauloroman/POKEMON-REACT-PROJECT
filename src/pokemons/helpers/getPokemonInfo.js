@@ -5,6 +5,7 @@ export const getPokemonInfo = ( data ) => {
             image2: data?.sprites.front_default,
             image3: data?.sprites.back_default,
             image4: data?.sprites.other.dream_world.front_default,
+            image5: data?.sprites.other.home.front_default,
             name: data?.name[0].toUpperCase() + data?.name.slice(1, data?.name.length).toLowerCase(),
             type: data?.types.map( type => type.type.name ),
             hp: data?.stats[0].base_stat,

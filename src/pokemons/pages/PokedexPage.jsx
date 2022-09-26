@@ -1,8 +1,9 @@
-import { useEffect } from "react"
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { useModal } from "../../hooks";
+import { setPage } from "../../store/slices/page.slice";
+import { setSearchType } from "../../store/slices/search.slice";
 
-import { setUserName } from "../../store/slices/username.slice";
 import { Bar, ChooseForm, Modal } from "../../ui"
 import { PokemonList } from "../components";
 
@@ -10,13 +11,14 @@ export const PokedexPage = () => {
 
       const dispatch = useDispatch();
       const { modal, onShowModal } = useModal();
-
+      
       // GLOBAL STATES
-      const username = useSelector( store => store.username );
+      const username = useSelector( store => store.username )
 
       useEffect( () => {
-            dispatch( setUserName( localStorage.getItem('username') ));
-      }, [] );
+            dispatch( setPage( JSON.parse(localStorage.getItem('page') ) || 1 ) )
+            dispatch( setSearchType( localStorage.getItem('searchType') || '' ) )
+      }, [] )
 
       return (
             <div className="pokedex">

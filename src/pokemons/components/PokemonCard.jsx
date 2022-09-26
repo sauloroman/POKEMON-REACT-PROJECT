@@ -55,6 +55,13 @@ export const PokemonCard = ({ url }) => {
                         </div>
 
                   </div>
+
+                  <div className={`background-${pokemon.type?.[0]} pokemon__card-overlay animation`}>
+                        <img 
+                              src={ pokemon.image4 } 
+                              alt="Pokemon image" 
+                        />
+                  </div>
             </div>
       )
 }

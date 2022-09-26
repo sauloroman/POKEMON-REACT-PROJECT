@@ -1,31 +1,28 @@
 import { useEffect } from "react";
 import { useMemo } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import { setSearchType } from "../../store/slices/search.slice";
 
 import { useFetch, useForm } from "../../hooks"
 import { getPokemonTypes } from "../helpers";
+import { setPage } from "../../store/slices/page.slice";
 
 export const PokemonFormTypes = () => {
 
       const dispatch = useDispatch();
-      const searchType = useSelector( store => store.search.type );
 
       const { data } = useFetch('https://pokeapi.co/api/v2/type');
       const pokemonTypes = useMemo( () => getPokemonTypes( data?.results ), [ data ] );
 
       const { selectedType, onInputChange } = useForm({
-            selectedType: searchType
+            selectedType: localStorage.getItem('searchType') || ''
       })
 
       useEffect( () => {
-            dispatch( setSearchType( localStorage.getItem('searchType') ) )
-      }, [] );
-
-      useEffect( () => {
-            localStorage.setItem('searchType', selectedType );
             dispatch( setSearchType( selectedType ) )
+            localStorage.setItem('searchType', selectedType )
+            dispatch( setPage(1) );
       }, [ selectedType ] )
 
       return (

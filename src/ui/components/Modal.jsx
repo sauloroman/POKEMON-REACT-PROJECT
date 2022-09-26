@@ -4,6 +4,8 @@ import { setSearchName, setSearchType } from "../../store/slices/search.slice";
 import { setUserName } from "../../store/slices/username.slice";
 
 import pokemonEnd2 from '../../../assets/img/pokemonEnd2.gif'
+import { setPage } from "../../store/slices/page.slice";
+import { setAmount } from "../../store/slices/amountPokemons.slice";
 
 export const Modal = ({ onShowModal }) => {
 
@@ -16,10 +18,14 @@ export const Modal = ({ onShowModal }) => {
 
             localStorage.removeItem('username');
             localStorage.removeItem('searchType');
+            localStorage.removeItem('page');
+            localStorage.removeItem('amountPokemons')
 
+            dispatch( setPage(1) );
             dispatch( setUserName('') );
             dispatch( setSearchName('') );
             dispatch( setSearchType('') );
+            dispatch( setAmount(20) );
 
             navigate('/login')
       }

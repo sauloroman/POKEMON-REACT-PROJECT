@@ -5,7 +5,7 @@ import { Return } from './Return'
 export const ErrorPage = () => {
 
       return (
-            <div className="error__page">
+            <div className="error__page shadow">
                   <h2>UPS!</h2>
 
                   <div className="error__imageBox">
@@ -21,7 +21,10 @@ export const ErrorPage = () => {
 
                   <p className='error__text'>Pokemon no encontrado</p>
 
-                  <Return>&larr; Volver a Pokedex</Return>
+                  <div className="animate__animated animate__bounce animate__infinite">
+                        <Return>&larr; Volver a Pokedex</Return>
+                  </div>
+                
             </div>
       )
 }

@@ -6,7 +6,6 @@
       height: 100vh;
       display: flex;
       flex-direction: column;
-      background-color: #fff;
 }
 
 .login__image {
@@ -17,13 +16,11 @@
 
 .login__text {
       text-align: center;
-      color: var(--color-font-1);
       margin-bottom: 5rem;
 }
 
 .login__title {
       margin-bottom: 2rem;
-      color: var(--color-red-3);
 }
 
 .bar--login {
@@ -34,14 +31,18 @@
       margin-bottom: 3rem;
 }
 
-.login__gif {
+.login__gif-1,
+.login__gif-2 {
       width: 95%;
-      display: flex;
       justify-content: flex-end;
 } 
 
-.login__gif img {
+.login__gif-1 img {
       width: 60%;
+}
+
+.login__gif-2 img {
+      width: 50%;
 }
 
 /* ##################### */
@@ -59,7 +60,7 @@
 }
 
 .choose__header img {
-      max-width: 30%;
+      width: 30%;
 }
 
 .pokedex__header {
@@ -102,10 +103,35 @@
       border-radius: 9px;
       margin-bottom: 2rem;
       cursor: pointer;
+      position: relative;
+}
+
+.pokemon__card-overlay {
+      position: absolute;
+      display: inline-block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-white);
+      opacity: 0;
+      overflow-y: hidden;
+      border-radius: 9px;
+}
+
+.pokemon__card-overlay img {
+      width: 70%;
 }
 
 .pokemon__card:hover {
       transform: translateY(-5px);
+}
+
+.pokemon__card:hover .pokemon__card-overlay {
+      opacity: 1;
 }
 
 .pokemon__card-imageBox {
@@ -175,6 +201,10 @@
       font-size: 1.2rem;
       font-weight: 400;
       color: var(--color-font-4);
+}
+
+.pokemon__card-stat p {
+      font-weight: bold;
 }
 
 /* ##################### */
@@ -320,19 +350,20 @@
       width: 100%;
 }
 
-.pokemon__galleryImgBox:nth-child(1) img {
+.pokemon__galleryImgBox:nth-child(1) img,
+.pokemon__galleryImgBox:nth-child(3) img {
       object-fit: cover;
       width: 12rem;
 }
 
 .pokemon__galleryImgBox:nth-child(2) img,
-.pokemon__galleryImgBox:nth-child(3) img {
+.pokemon__galleryImgBox:nth-child(4) img {
       object-fit: cover;
       width: 10rem;
 }
 
 .pokemon__subgallery {
-      margin-top: 1rem;
+      margin: 1rem 0;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 1rem;
@@ -364,6 +395,47 @@
       border-radius: 100px;
       font-weight: 400;
       color: var(--color-black-1);
+}
+
+.pokemon__list-info {
+      margin: 0 auto;
+      width: 90%;
+      background-color: var(--color-white);
+      color: var(--color-font-2);
+      margin-bottom: 5rem;
+      padding: 2rem;
+}
+
+.pokemon__list-info h2 {
+      font-size: 2rem;
+      padding-bottom: 1rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid currentColor;
+}
+
+.pokemon__list-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+}
+
+.pokemon__list-text p {
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+}
+
+.pokemon__list-text span {
+      margin-top: 1rem;
+      font-size: 2.4rem;
+      font-weight: 700;
+}
+
+.pokemon__list-text span:last-child::first-letter {
+      text-transform: uppercase;
 }
 
 /* ##################### */
@@ -408,3 +480,141 @@
 .rotate:hover {
       animation: Stop .5s ease-out;
 }
+
+.settings__container {
+      width: 95%;
+      margin: 0 auto;
+      background-color: var(--color-white);
+      padding: 2.5rem;
+}
+
+.settings__header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.settings__header h2,
+.settings__icon {
+      font-size: 2rem;
+      color: var(--color-font-1);
+      text-transform: uppercase;
+      margin-bottom: 5rem;
+}
+
+.settings__icon {
+      margin-right: 2rem;
+}
+
+.form__field {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 6rem;
+}
+
+.form__text {
+      display: flex;
+      align-items: center;
+      color: var(--color-red-2);
+      margin-bottom: 3rem;
+}
+
+.form__text h3 {
+      font-size: 1.6rem;
+      text-transform: uppercase;
+}
+
+.form__icon {
+      font-size: 2rem;
+      margin-right: 1rem;
+}
+
+.form__options {
+      flex: 1;
+      display: flex;
+      gap: 4rem;
+}
+
+.form__inputOption {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.form__inputOption label {
+      cursor: pointer;
+      margin-right: 2rem;
+      font-weight: 700;
+      font-size: 1.4rem;
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+input[type="radio"] + label:before {
+      content: "";
+      width: 26px;
+      height: 26px;
+      float: left;
+      margin: 0 1rem .5rem 0;
+      border: 2px solid #ccc;
+      background: #fff;
+      border-radius: 100%;
+}
+
+input[type="radio"]:checked + label:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 1rem solid var(--color-red-2);
+    float: left;
+    margin-left: -3.3rem;
+    margin-top: .2em;
+    border-radius: 100%;
+}
+
+.settings__image-1,
+.settings__image-2 {
+      justify-content: flex-end;
+}
+
+.settings__image-1 img,
+.settings__image-2 img {
+      width: 50%;
+}
+
+/* ########################## */
+/* PAGINATION */
+/* ########################## */
+
+.pagination {
+      margin: 8rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      align-items: center;
+      font-size: 2.4rem;
+      font-weight: bold;
+}
+
+.pagination__control.disabled {
+      cursor: not-allowed;
+      opacity: .3;
+}
+
+.pagination__control {
+      cursor: pointer;
+      padding: 2rem;
+}
+
+.pagination__icon {
+      font-size: 3rem;
+}
+
+.pagination__amount {
+      text-align: center;
+      font-size: 2rem;
+}
+
+

@@ -8,6 +8,8 @@ import { PokemonApp } from './PokemonApp';
 
 import './css/general.css'
 import './css/styles.css'
+import './css/themes.css'
+import './css/queries.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

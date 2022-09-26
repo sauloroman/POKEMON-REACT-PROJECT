@@ -8,6 +8,11 @@
       -webkit-animation: sk-rotate 2.0s infinite linear;
       animation: sk-rotate 2.0s infinite linear;
     }
+
+    .theme-dark .dot1,
+    .theme-dark .dot2 {
+      background-color: #fff;
+    }
     
     .dot1, .dot2 {
       width: 60%;

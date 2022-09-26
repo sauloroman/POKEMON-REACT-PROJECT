@@ -1,13 +1,16 @@
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setUserName } from '../../store/slices/username.slice';
 
 import { Bar, Error } from '../../ui';
 
+
 import { useForm } from '../../hooks';
 
 import PokemonLettering from '../../../assets/img/pokedex__title.png';
 import pokemonGifLogin from '../../../assets/img/pokemonGifLogin.gif'
+import pokemonGifLoginDark from '../../../assets/img/pokemonGifLoginDark.gif'
 
 export const LoginPage = () => {
       
@@ -35,6 +38,7 @@ export const LoginPage = () => {
 
             onResetForm();
       }
+
 
       return (
             <div className='login'>
@@ -69,8 +73,11 @@ export const LoginPage = () => {
                         }
                   </form>
 
-                  <div className='login__gif'>
+                  <div className='login__gif-1'>
                         <img src={pokemonGifLogin} alt="Pokemon peleando" />
+                  </div>
+                  <div className='login__gif-2'>
+                        <img src={pokemonGifLoginDark} alt="Pokemon peleando" />
                   </div>
 
                   <div className="bar--login">

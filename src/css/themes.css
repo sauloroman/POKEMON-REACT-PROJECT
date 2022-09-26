@@ -1,0 +1,163 @@
+/* ###################################### */
+/* THEME LIGHT */
+/* ###################################### */
+
+.theme-light .login {
+      background-color: var(--color-white);
+}
+
+.theme-light .login__text {
+      color: var(--color-font-2);
+}
+
+.theme-light .login__title {
+      color: var(--color-red-1);
+}
+
+.theme-light .login__gif-1 {
+      display: flex;
+}
+
+.theme-light .login__gif-2 {
+      display: none;
+}
+
+.theme-light .settings__image-1 {
+      display: flex;
+}
+
+.theme-light .settings__image-2 {
+      display: none;
+}
+
+.theme-light .pagination,
+.theme-light .pagination__amount {
+      color: var(--color-font-1);
+}
+
+.theme-light .pagination__control {
+      background-color: var(--color-red-1);
+}
+
+.theme-light .pagination__control:hover {
+      background-color: var(--color-red-3);
+}
+
+
+/* ###################################### */
+/* THEME DARK */
+/* ###################################### */
+
+.theme-dark .login {
+      background-color: var(--color-theme-dark);
+}
+
+.theme-dark .login__text {
+      color: var(--color-white);
+}
+
+.theme-dark .login__title {
+      color: #364fc7;
+}
+
+.theme-dark .login__gif-1 {
+      display: none;
+}
+
+.theme-dark .login__gif-2 {
+      display: flex;
+}
+
+.theme-dark .pokedex__welcome {
+      color: #364fc7;
+}
+
+.theme-dark .pokedex__welcome span {
+      color: var(--color-white);
+}
+
+.theme-dark .choose__header {
+      background-color: var(--color-theme-dark);
+}
+
+.theme-dark .form .form__select {
+      color: var(--color-white);
+      background-color: var(--color-window-dark);
+      border: 5px solid currentColor;
+}
+
+.theme-dark .form .form__select option {
+      background-color: #364fc7;
+      color: var(--color-white)
+}
+
+.theme-dark .settings__container {
+      color: var(--color-white);
+      background-color: var(--color-window-dark);
+}
+
+.theme-dark .settings__header h2,
+.theme-dark .settings__icon {
+      color: var(--color-white);
+}
+
+.theme-dark .settings__image-1 {
+      display: none;
+}
+
+.theme-dark .settings__image-2 {
+      display: flex;
+}
+
+.theme-dark .error__imageContainer p,
+.theme-dark .error__text {
+      color: var(--color-white);
+}
+
+.theme-dark .form__text {
+      color: #364fc7;
+}
+
+.theme-dark .form__text h3 {
+      font-weight: 600;
+}
+
+.theme-dark .btn {
+      background-color: #364fc7;
+}
+
+.theme-dark .btn:hover {
+      background-color: #3f5df0;
+}
+
+.theme-dark .error__page h2 {
+      color: #364fc7;
+}
+
+.theme-dark .btn--white {
+      background-color: var(--color-window-dark);
+      color: var(--color-white);
+}
+
+.theme-dark .modal__pop {
+      background-color: var(--color-theme-dark);
+      color: var(--color-white);
+}
+
+.theme-dark .modal__pop h2 {
+      color: var(--color-white);
+} 
+
+.theme-dark .modal__icon {
+      color: var(--color-white);
+}
+
+.theme-dark .pagination,
+.theme-dark .pagination__amount {
+      color: var(--color-white);
+}
+
+.theme-dark .pokemon__list-info {
+      background-color: var(--color-window-dark);
+      color: var(--color-white);
+}
