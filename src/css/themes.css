@@ -43,6 +43,10 @@
       background-color: var(--color-red-3);
 }
 
+.theme-light .error__page {
+      background-color: var(--color-white); 
+}
+
 
 /* ###################################### */
 /* THEME DARK */
@@ -128,6 +132,10 @@
 
 .theme-dark .btn:hover {
       background-color: #3f5df0;
+}
+
+.theme-light .error__page {
+      background-color: var(--color-window-dark); 
 }
 
 .theme-dark .error__page h2 {
