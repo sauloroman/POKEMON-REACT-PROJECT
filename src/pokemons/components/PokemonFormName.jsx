@@ -21,9 +21,9 @@ export const PokemonFormName = () => {
 
             if ( onDetectEmptyFields() ) return;
 
-            dispatch( setSearchName( nameSearched ) ) 
+            dispatch( setSearchName( nameSearched.toLowerCase() ) ) 
 
-            navigate(`/pokemon/${ nameSearched }`)
+            navigate(`/pokemon/${ nameSearched.toLowerCase() }`)
 
       }
 
