@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom"
 import { LoginPage } from "../auth/pages"
 import { PokemonsRoutes } from "../pokemons/routes"
 import { setTheme } from "../store/slices/theme.slice"
+import { setUserName } from "../store/slices/username.slice"
 import { chooseColor } from "../ui"
 import { PublicRoute, PrivateRoute } from "./"
 
@@ -17,6 +18,8 @@ export const AppRouter = () => {
             dispatch( setTheme( localStorage.getItem('theme') || 'theme-light'));
             
             chooseColor( localStorage.getItem('theme') || 'theme-light' );
+
+            dispatch( setUserName( localStorage.getItem('username') ))
       }, [] )
 
       return (
